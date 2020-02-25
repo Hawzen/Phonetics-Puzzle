@@ -29,10 +29,10 @@ function draw() {
   for(i=0;i<lins.length-1;i+=1){
     for(j=0; j<lins[0].length-1;j+=1){
       
-      perlin = map(noise(t)*sin(t), 0, 1, 0, 20)
-      hu = map(noise(t, j, i), 0, 1, 1, 30)
+      perlin = map(noise(t, i, j)*sin(t), 0, 1, 0, 100)
+      hu = map(noise(t, j, i), 0, 1, 0, 30)
       c = color(hu, perlin, perlin)
-      c2 = color(12, perlin*10, perlin*2)
+      c2 = color(0, perlin*10, 10)
       fill(hu); stroke(0)
 
       try{

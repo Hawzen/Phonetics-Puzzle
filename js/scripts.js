@@ -10,7 +10,7 @@ $('.list-group a').on('click', function (e) {
 });
 
 
-var typed = term("<strong><sup><mark>Guest@FTC_Puzzle</mark> ~$</b></sup> ^250 <br>Can you solve this puzzle?^600<br><br>" + 
+var typed = term("<strong><sup><mark>Guest@FTC_Phonetics_Puzzle</mark> ~$</b></sup> ^250 <br>Can you solve this puzzle?^600<br><br>" + 
     "You can pick up to <samp>3 words</samp>,<br>Try to get a score of <samp><mark><b>5</b></mark></samp></strong>");
 
 function term(text) {
@@ -37,11 +37,13 @@ $("#myBtn").click(function () {
     dict.set('i', 0);
     dict.set('u', 0);
 
-    var str = '';
+    let str = '';
+    let names = ''; 
 
     $(".list-group-item").each(function (index) {
         if ($(this).hasClass('active')) {
             str += $(this).text();
+            names += ("<br>&ensp;<kbd>" + $(this).text() + "</kbd>^100")
             $(this).removeClass("active");
         }
     });
@@ -49,9 +51,8 @@ $("#myBtn").click(function () {
 
     // check input
     if (str != '') {
-        str = str.toLowerCase();
         var score = 0;
-        for (let ch of str) {
+        for (let ch of str.toLowerCase()) {
             if ((ch == 'a' ||
                 ch == 'e' ||
                 ch == 'o' ||
@@ -64,9 +65,20 @@ $("#myBtn").click(function () {
 
         typed.destroy();
 
-        // TODO: win condition and page
-
-        typed = term("Guest@FTC_Challenge ~$ ^100<br>Score needed to win: 5<br><br>Calculating your score.^300.^300.^500<br><br>Your score is: " + score);
+        if(score == 5){
+            typed = term("<strong><sup><mark>Guest@FTC_Phonetics_Puzzle ~$</sup><br> "+
+        "You chose: <br>"+ names + 
+        "<br><br>Calculating your score.^300.^300.^500<br><br>`Your`^50 `score`^50 `is:`^250 <samp><mark><b>" + score + "</samp></mark></b>."
+        + "<br>Congratulations, you've solved the puzzle! " 
+        + "<br>&ensp;<mark>O</mark>samah <br>&ensp;Abd<mark>u</mark>lr<mark>a</mark>hman <br>&ensp;<mark>Ei</mark>yad"
+        + "<br>The key to this problem is the number of <i>Unique Vowels</i>.");
+        
+        }
+        else{
+        typed = term("<strong><sup><mark>Guest@FTC_Phonetics_Puzzle ~$</sup><br> "+
+        "You chose: <br>"+ names + 
+        "<br><br>Calculating your score.^300.^300.^500<br><br>`Your`^50 `score`^50 `is:`^250 <samp><mark><b>" + score + "</samp></mark></b>.</strong>");
+        }
     }
 })
 
