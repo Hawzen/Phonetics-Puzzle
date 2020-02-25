@@ -1,0 +1,16 @@
+{
+  "name": "ftc_challenge",
+  "version": "1.0.0",
+  "description": "FTC Challenge",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Omar Alanizi",
+  "license": "FTC",
+  "dependencies": {
+    "electron": "^8.0.1",
+    "typed.js": "^2.0.11",
+	"p5js.js": "^0.10.2"
+  }
+}
