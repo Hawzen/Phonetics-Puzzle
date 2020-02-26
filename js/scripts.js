@@ -11,7 +11,7 @@ $('.list-group a').on('click', function (e) {
 
 
 var typed = term("<strong><sup><mark>Guest@FTC_Phonetics_Puzzle</mark> ~$</b></sup> ^250 <br>Can you solve this puzzle?^600<br><br>" + 
-    "You can pick up to <samp>3 words</samp>,<br>Try to get a score of <samp><mark><b>5</b></mark></samp></strong>");
+    "You can pick up to <samp>3 words</samp>,<br>Try to get a score of <samp><mark><b>5</b></mark></samp></strong>.");
 
 function term(text) {
 
