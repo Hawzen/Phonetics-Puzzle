@@ -1,6 +1,6 @@
 
 
-<strong><h1>Phonetics Puzzle</strong></h1>  <h3>This is a repo for the phonetics puzzle. below is a sample from the code generated to demonstrate the puzzle's idea. I urge you to try out the puzzle first by clicking at the link: </h3> https://hawzen.github.io/Phonetics-Puzzle/
+<strong><h1>Phonetics Puzzle</strong></h1>  <h3>This is a repo for the phonetics puzzle. below is a sample from the code generated to demonstrate the puzzle's idea. I urge you to try out the puzzle first by clicking at this link: </h3><code>https://hawzen.github.io/Phonetics-Puzzle/</code>
 
 
 ```python
