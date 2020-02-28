@@ -1,5 +1,8 @@
 
 
+<strong><h1>Phonetics Puzzle</strong></h1> <br> <h3>This is a repo for the phonetics puzzle.</h3>
+
+
 ```python
 import pandas
 import numpy as np
