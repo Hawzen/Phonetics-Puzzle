@@ -1,13 +1,13 @@
 {
-  "name": "ftc_challenge",
+  "name": "Permutation Puzzle",
   "version": "1.0.0",
-  "description": "FTC Challenge",
+  "description": "A puzzle about maximizing an anonymous function.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "Omar Alanizi",
-  "license": "FTC",
+  "author": "Omar Alanizi, Mohand Alrasheed",
+  "license": "GPT",
   "dependencies": {
     "electron": "^8.0.1",
     "typed.js": "^2.0.11",

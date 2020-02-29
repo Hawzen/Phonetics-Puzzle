@@ -6,11 +6,11 @@ let t = 0;
 function setup() {
   createCanvas(screen.width, screen.height);
   colorMode(HSL)
-  
-  size = 75;
+
+  size = 100;
   lins = [];
   even = true;
-  for(let y=-size; y<height*1.1; y+=size){
+  for(let y=-size; y<height*1.2; y+=size){
     lin=[];
     even=!even
     for(let x=-size; x<width*1.1; x+=size){  

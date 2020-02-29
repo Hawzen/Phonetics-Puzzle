@@ -17,10 +17,8 @@ function term(text) {
 
     var options = {
         strings: [text],
-        typeSpeed: 1, // typing speed
-        backDelay: 650, // pause before backspacing
+        typeSpeed: 20, // typing speed
         loop: false, // loop on or off (true or false)
-        loopCount: false, // number of loops, false = infinite
         callback: function () { } // call function after typing is done
     }
 
