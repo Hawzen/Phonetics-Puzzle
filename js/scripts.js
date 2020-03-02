@@ -25,7 +25,11 @@ function term(text) {
     return new Typed(".terminal", options);
 
 }
-
+let date = new Date();
+let log = {
+    "tries" : []
+};
+let tryNum = 0;
 $("#myBtn").click(function () {
     // map for vowels
     let dict = new Map();
@@ -35,22 +39,24 @@ $("#myBtn").click(function () {
     dict.set('i', 0);
     dict.set('u', 0);
 
-    let str = '';
+    let namelist = [];
     let names = ''; 
 
     $(".list-group-item").each(function (index) {
         if ($(this).hasClass('active')) {
-            str += $(this).text();
-            names += ("<br>&ensp;<kbd>" + $(this).text() + "</kbd>^100")
+            namelist.push($(this).text());
             $(this).removeClass("active");
         }
     });
 
+    for(let name of namelist){
+        names += ("<br>&ensp;<kbd>" + name + "</kbd>^100") 
+    }
 
     // check input
-    if (str != '') {
+    if (namelist.length != 0) {
         var score = 0;
-        for (let ch of str.toLowerCase()) {
+        for (let ch of namelist.join().toLowerCase()) {
             if ((ch == 'a' ||
                 ch == 'e' ||
                 ch == 'o' ||
@@ -61,8 +67,10 @@ $("#myBtn").click(function () {
             }
         }
 
-        typed.destroy();
+        log.tries.push({"names": namelist, "time": (new Date()).getTime()});
+        console.log(log);
 
+        typed.destroy();
         if(score == 5){
             typed = term("<strong><sup><mark>Guest@FTC_Phonetics_Puzzle ~$</sup><br> "+
         "You chose: <br>"+ names + 
