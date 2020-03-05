@@ -6,8 +6,8 @@ let t = 0;
 function setup() {
   createCanvas(screen.width, screen.height);
   colorMode(HSL)
-
-  size = 100;
+  frameRate(30)
+  size = 125;
   lins = [];
   even = true;
   for(let y=-size; y<height*1.2; y+=size){
@@ -24,7 +24,7 @@ function setup() {
 
 function draw() {
   
-  t+= 0.007;
+  t += 0.007;
   //Spaghetti Code
   for(i=0;i<lins.length-1;i+=1){
     for(j=0; j<lins[0].length-1;j+=1){

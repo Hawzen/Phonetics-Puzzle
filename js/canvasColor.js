@@ -7,7 +7,7 @@ function setup() {
     createCanvas(screen.width, screen.height);
     colorMode(HSL)
 
-    rndmConst = [random(30, 200), random(40, 365), random(0.0001, 0.02), random(40, 70), random(1, 10)];
+    rndmConst = [random(30, 200), random(40, 365), random(0.0001, 0.02), random(40, 80), random(1, 10)];
 
     size = 75;
     lins = [];
