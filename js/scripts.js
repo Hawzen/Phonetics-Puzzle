@@ -17,7 +17,7 @@ function term(text) {
 
     var options = {
         strings: [text],
-        typeSpeed: 20, // typing speed
+        typeSpeed: 25, // typing speed
         loop: false, // loop on or off (true or false)
         callback: function () { } // call function after typing is done
     }
@@ -81,7 +81,7 @@ $("#myBtn").click(function () {
         
         }
         else{
-        typed = term("<strong><sup><mark>Guest@FTC_Phonetics_Puzzle ~$</sup><br> "+
+        typed = term("<strong><sup><mark>FTC@Permutation_Puzzle ~$</sup><br> "+
         "You chose: <br>"+ names + 
         "<br><br>Calculating your score.^300.^300.^500<br><br>`Your`^50 `score`^50 `is:`^250 <samp><mark><b>" + score + "</samp></mark></b>.</strong>");
         }
