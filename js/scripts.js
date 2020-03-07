@@ -77,7 +77,7 @@ $("#myBtn").click(function () {
         "<br><br>Calculating your score.^300.^300.^500<br><br>`Your`^50 `score`^50 `is:`^250 <samp><mark><b>" + score + "</samp></mark></b>."
         + "<br>Congratulations, you've solved the puzzle! " 
         + "<br>&ensp;<mark>O</mark>samah <br>&ensp;Abd<mark>u</mark>lr<mark>a</mark>hman <br>&ensp;<mark>Ei</mark>yad"
-        + "<br>The key to this problem is the number of <i>Unique Vowels</i>. The Safe password is <mark><strong>xxxx</strong></mark>");
+        + "<br>The key to this problem is the number of <i>Unique Vowels</i>. The Safe password is <mark><strong>4098</strong></mark>");
         
         }
         else{
